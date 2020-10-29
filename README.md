@@ -1,5 +1,5 @@
 # Motion-U-Net
-Detection of moving objects is a critical component of many computer vision tasks. Recently, deep learning architectures have been developed for supervised learning based moving object change detection. Some top performing architectures, like FgSegNet are single frame spatial appearance cue-based detection and tend to overfit to the training videos. We propose a novel compact multi-cue autoencoder deep architecture, Motion U-Net (MU-Net) for robust moving object detection that generalizes much better than FgSegNet and requires nearly 30 times fewer weight parameters. Motion and change cues are estimated using a multi-modal background subtraction module combined with flux tensor motion estimation. MU-Net was trained and evaluated on the CDnet-2014 change detection challenge video sequences and had an overall F-measure of 0.9369. We used the unseen SBI-2015 video dataset to assess generalization capacity where MU-Net had an F-measure of 0.7625 while FgSegNet v2 was 0.3519, less than half the MU-Net accuracy.
+Detection of moving objects is a critical component of many computer vision tasks. Recently, deep learning architectures have been developed for supervised learning based moving object change detection. Some top performing architectures, like FgSegNet are single frame spatial appearance cue-based detection and tend to overfit to the training videos. We propose a novel compact multi-cue autoencoder deep architecture, Motion U-Net (MU-Net) for robust moving object detection that generalizes much better than FgSegNet and requires nearly 30 times fewer weight parameters. Motion and change cues are estimated using a multi-modal background subtraction module combined with flux tensor motion estimation. MU-Net was trained and evaluated on the CDnet-2014 change detection challenge video sequences and had an overall F-measure of 0.9369. We used the unseen SBI-2015 video dataset to assess generalization capacity where MU-Net had an F-measure of 0.7625 while FgSegNet_v2 was 0.3519, less than half the MU-Net accuracy.
 
 ## MU-Net1: Single-stream Spatial-only Detection Using Semantic Segmentation
 The proposed single-stream moving object detection network, MU-Net1, is based on a ResNet-18 [15] backbone, which enables deeper layers without degradation in network learning by using identity shortcut connections that skips one or more layers to facilitate deeper information propagation.
@@ -12,3 +12,36 @@ The proposed MU-Net2 uses motion cues as input computed from multi-modal change 
 ![](/figures/MU-Net2_Arch.png)
 
 
+## Code with running instruction
+The codes with running instruction will be available soon. 
+
+
+### Project Collaborators and Contact
+
+**Author:** Gani Rahmon, Filiz Bunyak and Kannappan Palaniappan
+
+Copyright &copy; 2020-2021. Gani Rahmon and Prof. K. Palaniappan and Curators of the University of Missouri, a public corporation. All Rights Reserved.
+
+**Created by:** Ph.D. student: Gani Rahmon
+Department of Electrical Engineering and Computer Science,  
+University of Missouri-Columbia  
+
+For more information, contact:
+
+* **Gani Rahmon**  
+211 Naka Hall (EBW)  
+University of Missouri-Columbia  
+Columbia, MO 65211  
+grzc7@mail.missouri.edu  
+
+* **Dr. F. Bunyak**  
+219 Naka Hall (EBW)  
+University of Missouri-Columbia  
+Columbia, MO 65211  
+bunyak@missouri.edu
+
+* **Dr. K. Palaniappan**  
+205 Naka Hall (EBW)  
+University of Missouri-Columbia  
+Columbia, MO 65211  
+palaniappank@missouri.edu
