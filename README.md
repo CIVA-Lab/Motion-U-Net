@@ -16,13 +16,13 @@ The proposed MU-Net2 uses motion cues as input computed from multi-modal change 
 The codes with running instruction will be available soon. 
 
 
-### Project Collaborators and Contact
+## Project Collaborators and Contact
 
 **Author:** Gani Rahmon, Filiz Bunyak and Kannappan Palaniappan
 
 Copyright &copy; 2020-2021. Gani Rahmon and Prof. K. Palaniappan and Curators of the University of Missouri, a public corporation. All Rights Reserved.
 
-**Created by:** Ph.D. student: Gani Rahmon
+**Created by:** Ph.D. student: Gani Rahmon  
 Department of Electrical Engineering and Computer Science,  
 University of Missouri-Columbia  
 
