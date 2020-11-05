@@ -12,9 +12,59 @@ The proposed MU-Net2 uses motion cues as input computed from multi-modal change 
 ![](/figures/MU-Net2_Arch.png)
 
 
-## Code with running instruction
-The codes with running instruction will be available soon. 
+# How to use Motion U-Net
 
+**Src** folder contains all scripts used to train models, extract masks from trained models, threshold the output results to get binary masks, and use of pre-trained models.
+
+There are three parts for this software in ```Src``` folder, you can skip Part 1 (Train Models) if you are planning to use pre-trained models.
+
+**Part 1 -->** Train Models: train both MU-Net models from scratch.
+
+**Part 2 -->** Extract Masks: use trained/pre-trained models to extract masks.
+
+**Part 3 -->** Threshold: use thresholding to convert output masks to binary masks.
+
+In every parts, there are readme file that describes the needed steps. The description is also placed here.
+
+**You need to use PyTorch to do all the parts.**
+
+## Part 1 : Train Models
+
+**To train Motion U-Net1 (MU-Net1)**
+
+1. Put your input images used to train the network in a folder called **inputs**, inside **data/trainData/** folder. Initial 50 images are given as an example. 
+
+2. Put your label images used to train the network in a folder called **labels**, inside **data/trainData/** folder. Initial 50 images are given as an example. **label images should be binary mask, where background is equal to 0 and foreground is equal to 1**
+
+3. Change input and label paths and extensions accordingly in ```TrainMUNet1.py```. 
+
+4. Run ```TrainMUNet1.py```
+
+This script will train MU-Net1 model according to the inputs and labels you provided and save trained model inside **models** folder.
+
+**To train Motion U-Net2 (MU-Net2)**
+
+1. Put your input images used to train the network in a folder called **inputs**, inside **data/trainData/** folder. Initial 50 images are given as an example. 
+
+2. Put your Background Subtraction masks used to train the network in a folder called **bgSub**, inside **data/trainData/** folder. Initial 50 images are given as an example. 
+
+3. Put your Flux masks used to train the network in a folder called **flux**, inside **data/trainData/** folder. Initial 50 images are given as an example. 
+
+4. Put your label images used to train the network in a folder called **labels**, inside **data/trainData/** folder. Initial 50 images are given as an example. **label images should be binary mask, where background is equal to 0 and foreground is equal to 1**
+
+3. Change inputs and label paths and extensions accordingly in ```TrainMUNet2.py```. 
+
+4. Run ```TrainMUNet2.py```
+
+This script will train MU-Net2 model according to the inputs and labels you provided and save trained model inside **models** folder.
+
+## Part 2 : Extract Masks
+
+The detailed instuctions will be available soon.
+
+## Part 3 : Threshold
+
+The detailed instuctions will be available soon.
 
 ## Project Collaborators and Contact
 
