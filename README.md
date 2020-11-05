@@ -34,7 +34,7 @@ In every parts, there are readme file that describes the needed steps. The descr
 
 1. Put your input images used to train the network in a folder called **inputs**, inside **data/trainData/** folder. Initial 50 images are given as an example. 
 
-2. Put your label images used to train the network in a folder called **labels**, inside **data/trainData/** folder. Initial 50 images are given as an example. **label images should be binary mask, where background is equal to 0 and foreground is equal to 1**
+2. Put your label images used to train the network in a folder called **labels**, inside **data/trainData/** folder. Initial 50 images are given as an example. **Label images should be binary mask, where background is equal to 0 and foreground is equal to 1**
 
 3. Change input and label paths and extensions accordingly in ```TrainMUNet1.py```. 
 
@@ -50,7 +50,7 @@ This script will train MU-Net1 model according to the inputs and labels you prov
 
 3. Put your Flux masks used to train the network in a folder called **flux**, inside **data/trainData/** folder. Initial 50 images are given as an example. 
 
-4. Put your label images used to train the network in a folder called **labels**, inside **data/trainData/** folder. Initial 50 images are given as an example. **label images should be binary mask, where background is equal to 0 and foreground is equal to 1**
+4. Put your label images used to train the network in a folder called **labels**, inside **data/trainData/** folder. Initial 50 images are given as an example. **Label images should be binary mask, where background is equal to 0 and foreground is equal to 1**
 
 3. Change inputs and label paths and extensions accordingly in ```TrainMUNet2.py```. 
 
