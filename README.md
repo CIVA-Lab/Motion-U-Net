@@ -14,7 +14,9 @@ The proposed MU-Net2 uses motion cues as input computed from multi-modal change 
 
 # How to use Motion U-Net
 
-**Src** folder contains all scripts used to train models, extract masks from trained models, threshold the output results to get binary masks, and use of pre-trained models.
+**Src** folder contains all scripts used to train models, extract masks from trained models, and threshold the output results to get binary masks.
+
+**weights** folder contains pre-trained models of the Motion U-Net, if you want to use pre-trained models, put them inside **Src/models/** folder.
 
 There are three parts for this software in ```Src``` folder, you can skip Part 1 (Train Models) if you are planning to use pre-trained models.
 
@@ -34,9 +36,9 @@ In every parts, there are readme file that describes the needed steps. The descr
 
 1. Put your input images used to train the network in a folder called **inputs**, inside **data/trainData/** folder. Initial 50 images are given as an example. 
 
-2. Put your label images used to train the network in a folder called **labels**, inside **data/trainData/** folder. Initial 50 images are given as an example. **Label images should be binary mask, where background is equal to 0 and foreground is equal to 1**
+2. Put your label images used to train the network in a folder called **labels**, inside **data/trainData/** folder. Initial 50 images are given as an example. **Label images should be binary mask, where background is equal to 0 and foreground is equal to 1**.
 
-3. Change input and label paths and extensions accordingly in ```TrainMUNet1.py```. 
+3. Change input and label paths and extensions accordingly in ```TrainMUNet1.py```
 
 4. Run ```TrainMUNet1.py```
 
@@ -50,9 +52,9 @@ This script will train MU-Net1 model according to the inputs and labels you prov
 
 3. Put your Flux masks used to train the network in a folder called **flux**, inside **data/trainData/** folder. Initial 50 images are given as an example. 
 
-4. Put your label images used to train the network in a folder called **labels**, inside **data/trainData/** folder. Initial 50 images are given as an example. **Label images should be binary mask, where background is equal to 0 and foreground is equal to 1**
+4. Put your label images used to train the network in a folder called **labels**, inside **data/trainData/** folder. Initial 50 images are given as an example. **Label images should be binary mask, where background is equal to 0 and foreground is equal to 1**.
 
-3. Change inputs and label paths and extensions accordingly in ```TrainMUNet2.py```. 
+3. Change inputs and label paths and extensions accordingly in ```TrainMUNet2.py```
 
 4. Run ```TrainMUNet2.py```
 
@@ -60,7 +62,38 @@ This script will train MU-Net2 model according to the inputs and labels you prov
 
 ## Part 2 : Extract Masks
 
-The detailed instuctions will be available soon.
+**To extract masks of Motion U-Net1 (MU-Net1)**
+
+1. To extract masks using trained / pre-trained model of MU-Net1 create a new folder with dataset name inside **data/testData/** folder and and put your images inside created folder. Initial 250 images are given as an example, which is taken from CDNet 2014 dataset.
+
+2. Change dataset paths and extensions accordingly in ```ExtractMaskMUNet1.py```
+
+3. Change video sequence paths accordingly in ```Flist.txt```. Some examples of video sequence taken from CDNet 2014 are given inside  ```Flist.txt```
+
+4. Run ```ExtractMaskMUNet1.py```
+
+This script will extract masks using trained / pre-trained model of MU-Net1 for the given dataset and save the result of output masks inside **outputMaskMUNet1** folder.
+
+**To extract masks of Motion U-Net2 (MU-Net2)**
+
+1. To extract masks using trained / pre-trained model of MU-Net2:
+
+* create a new folder with dataset name inside **data/testData/** folder and and put your images inside created folder. Initial 250 images are given as an example, which is taken from CDNet 2014 dataset
+
+* create another folder inside **data/testData/** folder and put Background Subtraction masks related to the input images. Initial 250 background subtraction masks are given as an example, which is obtained using OpenCV library **BackgroundSubtractorMOG2** on an input images. 
+
+* create another folder inside **data/testData/** folder and put Flux masks related to the input images. Initial 250 flux masks are given as an example, which is obtained using **trace of the flux tensor** on an input images.
+
+For more detail how to obtain Background Subtaction and Flux masks read the paper.  
+
+2. Change dataset paths and extensions accordingly in ```ExtractMaskMUNet2.py```
+
+3. Change video sequence paths accordingly in ```Flist.txt```. Some examples of video sequence taken from CDNet 2014 are given inside  ```Flist.txt```
+
+4. Run ```ExtractMaskMUNet2.py```
+
+This script will extract masks using trained / pre-trained model of MU-Net2 for the given dataset with related background subtraction and flux masks and save the result of output masks inside **outputMaskMUNet2** folder.
+
 
 ## Part 3 : Threshold
 
