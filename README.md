@@ -29,6 +29,7 @@ There are three parts for this software in ```Src``` folder, you can skip Part 1
 In every parts, there are readme file that describes the needed steps. The description is also placed here.
 
 **You need to use PyTorch to do Part 1 and Part2.**
+
 **You need to use MATLAB to do Part 3.**
 
 ## Part 1 : Train Models

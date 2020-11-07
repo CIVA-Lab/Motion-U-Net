@@ -1,4 +1,4 @@
-# Train Motion U-Net models and Extract Masks for trained / pretrained model of Motion U-Net
+# Train Motion U-Net models and Extract Masks for trained / pre-trained model of Motion U-Net
 
 ## Part 1 : Train Models
 
