@@ -28,7 +28,8 @@ There are three parts for this software in ```Src``` folder, you can skip Part 1
 
 In every parts, there are readme file that describes the needed steps. The description is also placed here.
 
-**You need to use PyTorch to do all the parts.**
+**You need to use PyTorch to do Part 1 and Part2.**
+**You need to use MATLAB to do Part 3.**
 
 ## Part 1 : Train Models
 
@@ -96,7 +97,31 @@ This script will extract masks using trained / pre-trained model of MU-Net2 for 
 
 ## Part 3 : Threshold
 
-The detailed instuctions will be available soon.
+**To get binary masks of Motion U-Net1 (MU-Net1)**
+
+1. Change ```orgImgFolder``` and ```maskFolder``` paths accordingly in ```threshold.m```. The example is given for CDNet 2014 dataset.
+
+2. Change input image names and extension accordingly in ```threshold.m```
+
+3. Change the folder path of video sequences and maximum number of frames in that sequence accordingly in ```runThreshold.m```. The example is given for CDNet 2014 dataset.
+
+4. Run ```runThreshold.m```
+
+This script will resize and threshold extracted masks to generate binary masks and save the binary masks inside ```thresholdMUNet1``` folder.  
+
+**To get binary masks of Motion U-Net2 (MU-Net2)**
+
+1. Change ```orgImgFolder``` and ```maskFolder``` paths accordingly in ```threshold.m```. The example is given for CDNet 2014 dataset.
+
+2. Change ```thresholdFolder``` to ```../thresholdMUNet2/...``` and rest accordingly in ```threshold.m```
+
+3. Change input image names and extension accordingly in ```threshold.m```
+
+4. Change the folder path of video sequences and maximum number of frames in that sequence accordingly in ```runThreshold.m```. The example is given for CDNet 2014 dataset.
+
+5. Run ```runThreshold.m```
+
+This script will resize and threshold extracted masks to generate binary masks and save the binary masks inside ```thresholdMUNet2``` folder.  
 
 ## Project Collaborators and Contact
 
