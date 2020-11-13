@@ -73,6 +73,10 @@ model = MUNet(numClass).to(device)
 
 # load trained model
 model = torch.load('./models/MUNet2.pt')
+
+# load pre-trained weights
+# model.load_state_dict(torch.load('./weights/MU_Net2_Weights.pt'))
+
 model.eval() 
 
 # get video path from Flist.txt
