@@ -16,7 +16,7 @@ The proposed MU-Net2 uses motion cues as input computed from multi-modal change 
 
 **Src** folder contains all scripts used to train models, extract masks from trained models, and threshold the output results to get binary masks.
 
-**weights** folder contains pre-trained models of the Motion U-Net, if you want to use pre-trained models, put them inside **Src/models/** folder.
+**weights** folder contains pre-trained weights of the Motion U-Net, if you want to use pre-trained weights, put them inside **Src/weights/** folder.
 
 There are three parts for this software in ```Src``` folder, you can skip Part 1 (Train Models) if you are planning to use pre-trained models.
 
@@ -137,7 +137,7 @@ University of Missouri-Columbia
 For more information, contact:
 
 * **Gani Rahmon**  
-211 Naka Hall (EBW)  
+226 Naka Hall (EBW)
 University of Missouri-Columbia  
 Columbia, MO 65211  
 grzc7@mail.missouri.edu  
