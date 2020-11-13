@@ -137,7 +137,7 @@ University of Missouri-Columbia
 For more information, contact:
 
 * **Gani Rahmon**  
-226 Naka Hall (EBW)
+226 Naka Hall (EBW)  
 University of Missouri-Columbia  
 Columbia, MO 65211  
 grzc7@mail.missouri.edu  
