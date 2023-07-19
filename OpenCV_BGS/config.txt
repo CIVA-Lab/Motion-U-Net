@@ -1,0 +1,11 @@
+# Config file to run OpenCV Background Subtraction
+
+##### IO Parameters #####
+# Input sequence path (give full path)
+input_dir = /mnt/c/Users/ganir/OneDrive/Desktop/Projects/Motion-U-Net/Src/data/trainData/inputs
+
+# Input image file format (e.g., jpg, png)
+image_ext = jpg
+
+# Ouput path (give full path)
+output_dir =  /mnt/c/Users/ganir/OneDrive/Desktop/Projects/Motion-U-Net/Src/data/trainData/BGS/

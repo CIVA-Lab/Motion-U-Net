@@ -1,4 +1,14 @@
-# Motion U-Net: Multi-cue Encoder-Decoder Network for Motion Segmentation
+# Motion U-Net
+The official implementation of the ICPR 2020 paper [**Motion U-Net: Multi-cue Encoder-Decoder Network for Motion Segmentation**](https://ieeexplore.ieee.org/document/9413211)
+
+## News
+
+**[July 18, 2023]** 
+
+- :fire::fire::fire:  **Code for generating Background Subtraction (BGS) result using OpenCV library used in this work is available now !** 
+
+
+## Motion U-Net: Multi-cue Encoder-Decoder Network for Motion Segmentation
 Detection of moving objects is a critical component of many computer vision tasks. Recently, deep learning architectures have been developed for supervised learning based moving object change detection. Some top performing architectures, like FgSegNet are single frame spatial appearance cue-based detection and tend to overfit to the training videos. We propose a novel compact multi-cue autoencoder deep architecture, Motion U-Net (MU-Net) for robust moving object detection that generalizes much better than FgSegNet and requires nearly 30 times fewer weight parameters. Motion and change cues are estimated using a multi-modal background subtraction module combined with flux tensor motion estimation. MU-Net was trained and evaluated on the CDnet-2014 change detection challenge video sequences and had an overall F-measure of 0.9369. We used the unseen SBI-2015 video dataset to assess generalization capacity where MU-Net had an F-measure of 0.7625 while FgSegNet_v2 was 0.3519, less than half the MU-Net accuracy.
 
 ## MU-Net1: Single-stream Spatial-only Detection Using Semantic Segmentation
@@ -124,6 +134,47 @@ This script will resize and threshold extracted masks to generate binary masks a
 
 This script will resize and threshold extracted masks to generate binary masks and save the binary masks inside ```thresholdMUNet2``` folder.  
 
+## Running OpenCV Background Subtraction (BGS):
+
+**To get BGS results for use in Motion U-Net1 (MU-Net1) and Motion U-Net2 (MU-Net2)**
+
+1. Go to ```OpenCV_BGS``` folder.
+```
+cd OpenCV_BGS
+```
+
+2. Change the input/output paths and image file format in ```config.txt``` file accordingly.  
+
+3. Create a ```build``` folder:  
+```
+mkdir build
+```
+
+4. Enter the ```build``` folder:
+```
+cd build
+```
+
+5. Run ```cmake```:
+```
+cmake ..
+```
+
+6. Run ```make```:
+```
+make
+```
+
+7. Go to ```bin/linux``` folder:
+```
+cd ../bin/linux
+```
+
+8. Run ```BGSubOpenCV```:
+```
+./BGSubOpenCV
+```
+
 ## Project Collaborators and Contact
 
 **Author:** Gani Rahmon, Filiz Bunyak and Kannappan Palaniappan
@@ -153,3 +204,17 @@ bunyak@missouri.edu
 University of Missouri-Columbia  
 Columbia, MO 65211  
 palaniappank@missouri.edu
+
+## ✏️ Citation
+
+If you think this project is helpful, please feel free to leave a star⭐️ and cite our paper:
+
+```
+@inproceedings{gani2021MUNet,
+  title={Motion U-Net: Multi-cue Encoder-Decoder Network for Motion Segmentation}, 
+  author={Rahmon, Gani and Bunyak, Filiz and Seetharaman, Guna and Palaniappan, Kannappan},
+  booktitle={2020 25th International Conference on Pattern Recognition (ICPR)}, 
+  pages={8125-8132},
+  year={2021}
+}
+```
